@@ -13,8 +13,10 @@
             <p id="desc">"To the root of your questions"</p>
         </div>
         <div class="search-section">
-            <div class="search-bar" aria-placeholder="Looking for something?"></div>
-            <img src="" alt="search button">
+            <form action="/search-results" method="get">
+                <input type="search" id="search-input" name="query" placeholder="Looking for something?">
+                <button type="submit"><img src="" alt="search button"></button>
+            </form>
         </div>
         
 

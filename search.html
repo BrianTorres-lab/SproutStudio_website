@@ -8,17 +8,24 @@
     </head>
     <body>
         <header><img src="" alt="Logo"> <a href=""><img src="" alt="profile"></a></header>
+
         <div class="backgPic">
             <h1>Info-hub</h1>
             <p id="desc">"To the root of your questions"</p>
         </div>
-        <div class="search-section">
+
+        <section class="search-section">
             <form action="/search-results" method="get">
                 <input type="search" id="search-input" name="query" placeholder="Looking for something?">
-                <button type="submit"><img src="" alt="search button"></button>
+                <button type="submit" id="search-button"><img src="" alt="search button">🔍</button>
             </form>
-        </div>
+        </section>
         
+        <section class="history-section">
+            <h2>Search History</h2>
+            <ul id="search-history"></ul>
+        </section>
 
+        <script src=""></script>
     </body>
 </html>

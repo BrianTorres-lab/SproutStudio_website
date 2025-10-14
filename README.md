@@ -1,4 +1,7 @@
 # SproutStudio_website
 IWeb Final Activity
-Testing commit
-\nTesting again
+
+Members:
+John Lapira
+Brian Torres
+Chyle Yambao

@@ -33,7 +33,7 @@ body {
 }
 
 /* -------------------------
-   Header / topbar & logo
+   Header / topbar & logo ----------------------------------------------------------------------------------------
    ------------------------- */
 
 header {
@@ -91,7 +91,7 @@ header {
 .section-title { font-weight:700; font-size:1.2rem; margin-bottom:10px; color:var(--green); }
 
 /* -------------------------
-   HERO (fixed height, background image covers)
+   HERO ----------------------------------------------------------------------------------------------------------------------------
    ------------------------- */
 
 .hero {
@@ -133,7 +133,7 @@ header {
 .hero-text p { font-size: clamp(13px, 2vw, 16px); opacity:0.95; }
 
 /* -------------------------
-   INDEX: featured options area
+   INDEX: featured options area------------------------------------------------------------------------------------------------
    ------------------------- */
 nav.featured-nav {
   padding: 18px 12px;
@@ -164,7 +164,7 @@ nav.featured-nav {
 }
 
 /* -------------------------
-   CARE GUIDE: card listing
+   CARE GUIDE: card listing ==============================================================================================================
    ------------------------- */
 .guide-section {
   padding: 8px 0 28px;
@@ -190,7 +190,7 @@ nav.featured-nav {
 .hidden { display:none; }
 
 /* -------------------------
-   SHOP / KITS SECTION (grid of kit-cards)
+   SHOP / KITS SECTION ==============================================================================================================
    ------------------------- */
 .notice {
   padding: 3px;
@@ -237,7 +237,7 @@ nav.featured-nav {
 .kit-price { font-weight:700; color:var(--text); margin-bottom:6px; }
 
 /* -------------------------
-   PRODUCT / DETAIL page (same card style)
+   PRODUCT / DETAIL page =====================================================================================================================
    ------------------------- */
 .page {
   padding: 20px 0 60px;
@@ -250,7 +250,7 @@ nav.featured-nav {
 .price-band { display:block; background:var(--price-band); padding:12px; border-radius:8px; text-align:center; font-weight:700; box-shadow: 0 6px 16px rgba(0,0,0,0.05); }
 
 /* -------------------------
-   SEARCH page history box
+   SEARCH page history box ==============================================================================================================
    ------------------------- */
 .search-section { margin: 18px auto; text-align:center; }
 #search-form { display:inline-flex; align-items:center; gap:8px; background:var(--card-bg); padding:6px 10px; border-radius:40px; box-shadow:var(--shadow); }
@@ -262,7 +262,7 @@ nav.featured-nav {
 #search-history li { padding:10px; border-radius:8px; background:#f7fff6; display:flex; justify-content:space-between; align-items:center; }
 
 /* -------------------------
-   PROFILE page (centered)
+   PROFILE page ============================================================================================================================
    ------------------------- */
 body.profile-page {
   background: linear-gradient(180deg, #2b7134 0%, #1f5a2d 70%);
@@ -278,7 +278,7 @@ body.profile-page {
 .profile-pic { width:150px; height:150px; border-radius:50%; object-fit:cover; margin:12px auto; }
 
 /* -------------------------
-   Footer
+   Footer ==============================================================================================================================
    ------------------------- */
 footer {
   margin-top:auto;
@@ -288,7 +288,7 @@ footer {
 }
 
 /* -------------------------
-   Responsive breakpoints
+   Responsive breakpoints ===============================================================================================================
    ------------------------- */
 @media (min-width: 601px) {
   .kits-grid { grid-template-columns: repeat(2, minmax(240px, 1fr)); }
@@ -311,7 +311,7 @@ footer {
 }
 
 /* -------------------------
-   Print rules (clean)
+   Print rules ==========================================================================================================================
    ------------------------- */
 @media print {
   header, .hamburger, .profile-menu, footer, #search-button { display: none !important; }

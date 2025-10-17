@@ -1,0 +1,662 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Background */
+body {
+    background-color: #ffffff;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #487b3b;
+    height: 70px;
+    z-index: 20;
+    position: relative;
+}
+
+.logo,
+.profile-icon {
+    width: 45px;
+    height: 45px;
+}
+
+/* ===========================
+   HERO SECTION (Fixed + Responsive)
+   =========================== */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;              /* top, right, bottom, left = 0 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.85);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/* Mobile screens */
+@media (max-width: 600px) {
+    .hero {
+        height: 50vh;
+        min-height: 300px;
+    }
+    .hero-text {
+        left: 18px;
+        bottom: 18px;
+        max-width: 85%;
+    }
+    .hero-text h1 {
+        font-size: clamp(20px, 6vw, 30px);
+    }
+}
+
+/* Tablet screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .hero {
+        height: 45vh;
+        min-height: 300px;
+    }
+    .hero-text {
+        left: 28px;
+        bottom: 24px;
+        max-width: 70%;
+    }
+}
+
+/* ===========================
+   NOTICE SECTION
+   =========================== */
+.notice {
+    background-color: white;
+    padding: 15px;
+    font-size: 13px;
+    text-align: center;
+    margin: 20px auto;
+    width: 85%;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* ===========================
+   KITS SECTION
+   =========================== */
+.kits-section {
+    background-color: #dcefcf;
+    padding: 25px 15px 60px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Kit Card */
+.kit-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-bottom: 22px;
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+}
+
+.kit-image {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.kit-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.kit-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #9c5633;
+}
+
+.kit-price {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.kit-details {
+    font-size: 14px;
+    color: #000;
+}
+
+/* View all */
+.view-all {
+    text-align: right;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #2b6e2f;
+}
+
+
+/* Responsive Fix: Center hero text properly on smaller screens */
+@media (max-width: 768px) {
+    .hero-text {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 90%; /* Prevent text cutoff on sides */
+        padding: 0 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 26px; /* Slightly smaller for mobile */
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+}
+
+/* Responsive Fix: Adjust hero section for laptops/tablets */
+@media (min-width: 769px) and (max-width: 1366px) {
+    .hero-text {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 80%;
+        padding: 0 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 30px; /* Balanced size for laptops */
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Next step */
+
+:root{
+  --green:#487b3b;
+  --light-green:#e6f6da;
+  --card-bg:#f6efe4;
+  --accent:#9c5633;
+  --price-band:#fff7ea;
+  --muted:#222;
+  --round:18px;
+  --shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+/* Reset */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial, sans-serif;color:var(--muted);}
+
+/* Page wrapper */
+.page{
+  background:var(--light-green);
+  min-height:100vh;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* Topbar */
+/* General topbar (keeps other pages unchanged) */
+.topbar {
+  background: var(--green);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+
+/* Make topbar full-width ONLY for pages that don't wrap it in .page */
+body:not(.page) .topbar {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Offset so content doesn’t get hidden under fixed header */
+body:not(.page) {
+  padding-top: 64px;
+}
+
+.logo{width:36px;height:36px;object-fit:contain;}
+.profile{width:36px;height:36px;border-radius:50%;background:#f0dff8;display:flex;align-items:center;justify-content:center}
+
+/* Main content container (center single column) */
+.container{
+  width:100%;
+  max-width:980px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  align-items:stretch;
+}
+
+/* top green strip (like screenshot) */
+.strip{
+  background:var(--green);
+  height:46px;
+  border-radius:6px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:6px 10px;
+}
+
+/* hero */
+.hero{
+  position:relative;
+  height:220px;
+  overflow:hidden;
+  border-radius:6px;
+  box-shadow: var(--shadow);
+}
+.hero img{width:100%;height:100%;object-fit:cover;filter:brightness(0.85);}
+.hero .hero-text{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  text-align:center;color:#fff;padding:0 12px;
+}
+
+/* Remove the second top green strip */
+.strip {
+  display: none; /* ← hides the extra green bar */
+}
+
+/* Hero text styles */
+.hero .hero-text h1 {
+  font-size: 34px;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #fff; /* ← force Kit Calculator text to white */
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+}
+
+.hero .hero-text p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff; /* ← make subtitle white too */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+}
+
+
+/* card */
+.card{
+  background:var(--card-bg);
+  border-radius:var(--round);
+  padding:18px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+/* kit title */
+.kit-title{
+  font-family: Georgia, 'Times New Roman', serif;
+  color:var(--accent);
+  font-size:28px;
+  text-align:center;
+}
+
+/* product image */
+.product-img{width:100%;height:240px;object-fit:cover;border-radius:12px;display:block;}
+
+/* price */
+.price-band{
+  background:var(--price-band);
+  padding:12px 10px;
+  border-radius:10px;
+  text-align:center;
+  font-weight:700;
+  font-size:20px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.04);
+}
+
+/* description text and list */
+.description{font-size:14px;line-height:1.45;color:#222;}
+.features{margin-top:8px;padding-left:18px;}
+.features li{margin-bottom:6px;}
+
+/* go back */
+.go-back{margin-top:8px;color:var(--green);font-weight:700;text-decoration:none;display:inline-block;}
+
+/* responsive */
+@media (max-width:900px){
+  .hero{height:260px;}
+  .product-img{height:200px;}
+}
+@media (max-width:520px){
+  .page{padding:12px;}
+  .hero{height:300px;}
+  .product-img{height:180px;}
+  .hero .hero-text h1{font-size:28px;}
+  .kit-title{font-size:24px;}
+}
+
+
+
+
+
+
+/* next step */
+/* CARE GUIDE PAGE */
+.care-hero {
+  background: url("images/seedlings.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 70px 15px 90px;
+}
+
+.care-hero h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+}
+
+.care-hero p {
+  font-size: 15px;
+  font-weight: 500;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+}
+
+.guide-section {
+  background-color: #dff5da;
+  padding: 25px;
+  text-align: center;
+}
+
+.featured {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.card {
+  background: #fffceb;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 15px auto;
+  width: 90%;
+  max-width: 360px;
+  padding: 15px;
+  text-align: left;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 8px 0;
+}
+
+.card h4 {
+  color: #2a7b3f;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.guide-list, .extra ul {
+  font-size: 14px;
+  color: #333;
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.see-more {
+  display: block;
+  margin: 8px auto;
+  background-color: transparent;
+  color: #2a7b3f;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.see-more:hover {
+  color: #1e5f32;
+  text-decoration: underline;
+}
+
+.extra {
+  margin-top: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.view-all {
+  text-align: right;
+  font-weight: 700;
+  color: #1e5f32;
+  margin: 25px 10px 0 0;
+  cursor: pointer;
+}
+
+
+.hero {
+  width: 120vw;   /* force full viewport width */
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body.profile-page {
+  margin: 0;
+  background-color: #2b7134; /* green background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.profile-container {
+  width: 320px;           /* keeps everything narrow */
+  text-align: center;
+  padding: 20px;
+}
+
+.back-arrow {
+  font-size: 24px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 15px auto;
+  display: block;
+}
+
+.username {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0 5px;
+}
+
+p {
+  margin: 4px 0;
+}
+
+.divider {
+  width: 80%;
+  margin: 15px auto;
+  border: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.logout-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #19b76b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+body.profile-page, 
+body.profile-page p, 
+body.profile-page .username {
+  color: white;
+}
+
+.back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root{
+  --green: #487b3b; /* adjust if you use different variable names */
+}
+
+/* Full reset to remove any browser gap */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Remove any default safe-area inset white gap (mobile iOS) */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--light-green, #e6f6da); /* fallback if you use this var elsewhere */
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Ensure the page uses full viewport and no extra scroll gap */
+body {
+  min-height: 100vh;
+  overflow-x: hidden; /* prevent horizontal scroll that can reveal background */
+}
+
+
+.header {
+  position: fixed;      /* lock to top so no gap can appear */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 64px;         /* keep same height you used before */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background: var(--green); /* full-width green */
+  z-index: 1200;
+  box-shadow: none;
+  border-radius: 0;     /* remove rounded corners that might show page background */
+}
+
+
+body {
+  padding-top: 64px; /* same as header height */
+}
+

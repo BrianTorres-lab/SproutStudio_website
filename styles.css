@@ -44,9 +44,15 @@ header a img:hover {
 .backgPic {
   background-image: url("SproutStudio_website-main/SproudStudio.png") center center/cover no-repeat;
   text-align: center;
-  color: #ffffff;
+  height: 300px;
+  display: flex;
   padding: 5rem 1rem;
   position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
 
 /* Optional dark overlay for contrast */
@@ -62,21 +68,44 @@ header a img:hover {
 }
 
 .backgPic h1,
-.backgPic p {
+.backgPic #desc {
   position: relative;
   z-index: 1;
 }
 
 .backgPic h1 {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 25px;
+  border-radius: 10px;
   font-size: 2.2rem;
-  letter-spacing: 2px;
-  margin-bottom: 0.3rem;
+  letter-spacing: 1px;
 }
 
 #desc {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 6px 20px;
+  border-radius: 8px;
   font-style: italic;
-  font-size: 1.1rem;
-  color: #f1f1f1;
+  margin-top: 8px;
+}
+
+/* =============================
+   SEARCH BAR STYLING
+============================= */
+.search-section {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+#search-form {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 5px 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* ========== FEATURED / NAVIGATION AREA ========== */
@@ -130,6 +159,76 @@ nav {
   font-size: 1rem;
 }
 
+#search-form:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#search-input {
+  border: none;
+  outline: none;
+  padding: 0.8rem 1rem;
+  width: 300px;
+  border-radius: 30px;
+  font-size: 1rem;
+}
+
+#search-button {
+  background-color: #3d8743;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+#search-button:hover {
+  background-color: #2e6b34;
+}
+
+/* =============================
+   SEARCH HISTORY
+============================= */
+.history-section {
+  background-color: #f2f8f0;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.history-section h2 {
+  color: #2b4a23;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+#search-history {
+  list-style: none;
+  padding: 0;
+}
+
+#search-history li {
+  background-color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 0.7rem;
+  text-align: left;
+  color: #314a2a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s;
+}
+
+#search-history li:hover {
+  background-color: #e5f4e2;
+}
+
 .option-extra {
   color: #3d8743;
   font-weight: bold;
@@ -147,9 +246,11 @@ footer {
 }
 
 /* ========== RESPONSIVE DESIGN ========== */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .backgPic {
-    padding: 4rem 1rem;
+
+    width: 200px;
+    font-size: 0.9rem;
   }
 
   .backgPic h1 {
@@ -167,5 +268,16 @@ footer {
 
   nav {
     padding: 1.5rem 0.5rem;
+  }
+
+  #search-button {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .history-section {
+    width: 95%;
+    padding: 1rem;
   }
 }

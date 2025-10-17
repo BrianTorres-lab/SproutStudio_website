@@ -25,7 +25,7 @@
         <section class="search-section">
             <form action="/search-results" method="get">
                 <input type="search" id="search-input" name="query" placeholder="Looking for something?">
-                <button type="submit" id="search-button"><img src="" alt="search button">🔍</button>
+                <button type="submit" id="search-button">🔍</button>
             </form>
         </section>
         
@@ -34,6 +34,34 @@
             <ul id="search-history"></ul>
         </section>
 
-        <script src=""></script>
+        <script>
+            const burger = document.getElementById('burger');
+            const popup = document.getElementById('menuPopup');
+            burger.addEventListener('click', () => {
+            burger.classList.toggle('active');
+            popup.classList.toggle('active');
+            });
+
+            // Search history + redirect to Google
+            const form = document.querySelector('form');
+            const input = document.getElementById('search-input');
+            const historyList = document.getElementById('search-history');
+
+            if(form){
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                const query = input.value.trim();
+                if(!query) return;
+                const li = document.createElement('li');
+                li.innerHTML = `<span>${query}</span> <button onclick="this.parentNode.remove()">✖</button>`;
+                li.querySelector('span').addEventListener('click', ()=> {
+                window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, '_blank');
+                });
+                historyList.prepend(li);
+                input.value = '';
+            });
+            }
+        </script>
+
     </body>
 </html>

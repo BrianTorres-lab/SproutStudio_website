@@ -151,7 +151,6 @@ nav.featured-nav {
   overflow:hidden;
   box-shadow: var(--shadow);
   transition: transform .18s ease, box-shadow .18s ease;
-  display:block;
   text-decoration:none;
   color: inherit;
   margin: 6px;
@@ -257,14 +256,61 @@ nav.featured-nav {
 /* -------------------------
    SEARCH page history box ==============================================================================================================
    ------------------------- */
-.search-section { margin: 18px auto; text-align:center; }
-#search-form { display:inline-flex; align-items:center; gap:8px; background:var(--card-bg); padding:6px 10px; border-radius:40px; box-shadow:var(--shadow); }
-#search-input { border:none; outline:none; padding:10px 12px; width:280px; background:transparent; font-size:1rem; }
-#search-button { background:var(--green); color:#fff; border:none; width:44px; height:44px; border-radius:50%; cursor:pointer; }
-
-.history-section { max-width:600px; margin:14px auto 40px; background: rgba(255,255,255,0.96); padding:14px; border-radius:12px; box-shadow:var(--shadow); }
-#search-history { list-style:none; display:flex; flex-direction:column; gap:10px; }
-#search-history li { padding:10px; border-radius:8px; background:#f7fff6; display:flex; justify-content:space-between; align-items:center; }
+.search-section {
+  text-align: center;
+  margin: 2rem auto 0;
+}
+#search-form, form[action="/search-results"] {
+  display: inline-flex;
+  align-items: center;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+}
+#search-input {
+  border: none;
+  outline: none;
+  padding: 0.8rem 1rem;
+  width: 280px;
+  border-radius: 30px;
+}
+#search-button {
+  background-color: var(--green);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.history-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: rgba(255,255,255,0.95);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.history-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#search-history {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#search-history li {
+  background: #f7fff6;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* -------------------------
    PROFILE page ============================================================================================================================

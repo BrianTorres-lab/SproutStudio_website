@@ -213,6 +213,25 @@ nav.featured-nav {
 
 .hidden { display:none; }
 
+.featured-table{
+  margin-top: 20px;
+  text-align: center;
+  color: #1f5a2d;
+}
+
+table {
+  width: 90%;
+  margin: 2rem auto;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+  border: 1px solid #aaa;
+  text-align: center;
+}
+th { background: rgba(61,135,67,0.9); color: white; }
+
+
 /* -------------------------
    SHOP / KITS SECTION ==============================================================================================================
    ------------------------- */

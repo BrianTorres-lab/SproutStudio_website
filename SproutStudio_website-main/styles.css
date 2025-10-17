@@ -59,7 +59,7 @@ header {
   height:4px; background:#fff; border-radius:3px; transition: transform .25s, opacity .25s;
 }
 
-/* profile menu (hidden by default, toggled via .active) */
+/* profile menu */
 .profile-menu {
   position: fixed;
   top: var(--header-h);
@@ -166,11 +166,16 @@ nav.featured-nav {
 /* -------------------------
    CARE GUIDE: card listing ==============================================================================================================
    ------------------------- */
+
 .guide-section {
   padding: 8px 0 28px;
   display:flex;
   flex-direction:column;
   gap: 18px;
+}
+
+.guide-list, .extra-hidden{
+  margin-left: 12px;
 }
 
 .card {

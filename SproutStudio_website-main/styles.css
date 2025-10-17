@@ -16,7 +16,7 @@
   --gap: 18px;
   --header-h: 70px;
   --max-width: 980px;
-  --gradient: linear-gradient(135deg, #e8ffdd 0%, #e6f6da 40%, #f0fff0 100%);
+  --gradient: linear-gradient(135deg, #d0f8bd 0%, #e6f6da 40%, #74cf74 100%);
 }
 
 * { box-sizing: border-box; margin:0; padding:0; }

@@ -1,406 +1,173 @@
+/* ==========================
+   UNIVERSAL RESET & VARIABLES
+========================== */
+:root {
+  --green: #3d8743;
+  --light-green: #e8f5e4;
+  --accent: #9c5633;
+  --card-bg: #fffceb;
+  --price-band: #fff7ea;
+  --muted: #222;
+  --round: 18px;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --gradient-bg: linear-gradient(180deg, #dff5da 0%, #f0fff0 100%);
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+  color: var(--muted);
 }
 
-/* Background */
+/* ==========================
+   GLOBAL LAYOUT
+========================== */
 body {
-    background-color: #ffffff;
+  background: var(--gradient-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 
-/* Header */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #487b3b;
-    height: 70px;
-    z-index: 20;
-    position: relative;
-}
-
-.logo,
-.profile-icon {
-    width: 45px;
-    height: 45px;
-}
-
-/* ===========================
-   HERO SECTION (Fixed + Responsive)
-   =========================== */
-.hero {
-    position: relative;
-    width: 100%;
-    height: 300px;
-}
-
-.hero-bg {
-    position: absolute;
-    inset: 0;              /* top, right, bottom, left = 0 */
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.85);
-}
-
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    width: 100%;
-    padding: 0 20px;
-}
-
-.hero-text h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.subtitle {
-    font-size: 16px;
-    font-weight: 500;
-}
-
-
-/* Mobile screens */
-@media (max-width: 600px) {
-    .hero {
-        height: 50vh;
-        min-height: 300px;
-    }
-    .hero-text {
-        left: 18px;
-        bottom: 18px;
-        max-width: 85%;
-    }
-    .hero-text h1 {
-        font-size: clamp(20px, 6vw, 30px);
-    }
-}
-
-/* Tablet screens */
-@media (min-width: 601px) and (max-width: 1024px) {
-    .hero {
-        height: 45vh;
-        min-height: 300px;
-    }
-    .hero-text {
-        left: 28px;
-        bottom: 24px;
-        max-width: 70%;
-    }
-}
-
-/* ===========================
-   NOTICE SECTION
-   =========================== */
-.notice {
-    background-color: white;
-    padding: 15px;
-    font-size: 13px;
-    text-align: center;
-    margin: 20px auto;
-    width: 85%;
-    border-radius: 8px;
-    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
-}
-
-/* ===========================
-   KITS SECTION
-   =========================== */
-.kits-section {
-    background-color: #dcefcf;
-    padding: 25px 15px 60px;
-}
-
-.section-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* Kit Card */
-.kit-card {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    margin-bottom: 22px;
-    border-radius: 15px;
-    overflow: hidden;
-    text-decoration: none;
-    color: black;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
-}
-
-.kit-image {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-}
-
-.kit-info {
-    padding: 15px;
-    text-align: left;
-}
-
-.kit-name {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 6px;
-    color: #9c5633;
-}
-
-.kit-price {
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.kit-details {
-    font-size: 14px;
-    color: #000;
-}
-
-/* View all */
-.view-all {
-    text-align: right;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #2b6e2f;
-}
-
-
-/* Responsive Fix: Center hero text properly on smaller screens */
-@media (max-width: 768px) {
-    .hero-text {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        width: 90%; /* Prevent text cutoff on sides */
-        padding: 0 10px;
-    }
-
-    .hero-text h1 {
-        font-size: 26px; /* Slightly smaller for mobile */
-    }
-
-    .subtitle {
-        font-size: 14px;
-    }
-}
-
-/* Responsive Fix: Adjust hero section for laptops/tablets */
-@media (min-width: 769px) and (max-width: 1366px) {
-    .hero-text {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        width: 80%;
-        padding: 0 15px;
-    }
-
-    .hero-text h1 {
-        font-size: 30px; /* Balanced size for laptops */
-    }
-
-    .subtitle {
-        font-size: 15px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Next step */
-
-:root{
-  --green:#487b3b;
-  --light-green:#e6f6da;
-  --card-bg:#f6efe4;
-  --accent:#9c5633;
-  --price-band:#fff7ea;
-  --muted:#222;
-  --round:18px;
-  --shadow: 0 8px 18px rgba(0,0,0,0.08);
-}
-
-/* Reset */
-*{box-sizing:border-box;margin:0;padding:0;font-family:Arial, sans-serif;color:var(--muted);}
-
-/* Page wrapper */
-.page{
-  background:var(--light-green);
-  min-height:100vh;
-  padding:20px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-
-/* Topbar */
-/* General topbar (keeps other pages unchanged) */
+/* ==========================
+   HEADER / TOPBAR
+========================== */
+header,
+.header,
 .topbar {
   background: var(--green);
-  height: 64px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 8px 16px;
-}
-
-/* Make topbar full-width ONLY for pages that don't wrap it in .page */
-body:not(.page) .topbar {
+  height: 64px;
   width: 100%;
-  max-width: 100%;
-  border-radius: 0;
-  margin: 0;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
 }
 
-/* Offset so content doesn’t get hidden under fixed header */
-body:not(.page) {
+body {
   padding-top: 64px;
 }
 
-.logo{width:36px;height:36px;object-fit:contain;}
-.profile{width:36px;height:36px;border-radius:50%;background:#f0dff8;display:flex;align-items:center;justify-content:center}
-
-/* Main content container (center single column) */
-.container{
-  width:100%;
-  max-width:980px;
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-  align-items:stretch;
+.logo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
 }
 
-/* top green strip (like screenshot) */
-.strip{
-  background:var(--green);
-  height:46px;
-  border-radius:6px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:6px 10px;
+.profile-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #cfe8c4;
+  padding: 5px;
+  transition: transform 0.2s ease;
 }
 
-/* hero */
-.hero{
-  position:relative;
-  height:220px;
-  overflow:hidden;
-  border-radius:6px;
-  box-shadow: var(--shadow);
-}
-.hero img{width:100%;height:100%;object-fit:cover;filter:brightness(0.85);}
-.hero .hero-text{
-  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  text-align:center;color:#fff;padding:0 12px;
+.profile-icon:hover {
+  transform: scale(1.05);
 }
 
-/* Remove the second top green strip */
-.strip {
-  display: none; /* ← hides the extra green bar */
+/* ==========================
+   INDEX PAGE: NAVIGATION OPTIONS
+========================== */
+nav {
+  background-color: var(--light-green);
+  text-align: center;
+  padding: 2rem 1rem;
 }
 
-/* Hero text styles */
-.hero .hero-text h1 {
-  font-size: 34px;
-  margin-bottom: 6px;
+.featured {
+  font-size: 1.6rem;
   font-weight: 700;
-  color: #fff; /* ← force Kit Calculator text to white */
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+  color: #1b331b;
+  margin-bottom: 1.2rem;
+  font-family: "Fredoka One", sans-serif;
 }
 
-.hero .hero-text p {
-  font-size: 13px;
+.options {
+  display: inline-block;
+  background-color: #fff8f1;
+  border-radius: 15px;
+  width: 160px;
+  padding: 0.8rem;
+  margin: 0.6rem;
+  text-align: center;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  vertical-align: top;
+}
+
+.options:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.options img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.option-name {
   font-weight: 600;
-  color: #fff; /* ← make subtitle white too */
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+  color: #315c2b;
+  font-size: 1rem;
 }
 
-
-/* card */
-.card{
-  background:var(--card-bg);
-  border-radius:var(--round);
-  padding:18px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
-  display:flex;
-  flex-direction:column;
-  gap:12px;
+.option-extra {
+  color: var(--green);
+  font-weight: bold;
+  font-size: 1rem;
 }
 
-/* kit title */
-.kit-title{
-  font-family: Georgia, 'Times New Roman', serif;
-  color:var(--accent);
-  font-size:28px;
-  text-align:center;
+/* ==========================
+   HERO / BANNER
+========================== */
+.hero,
+.backgPic {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("SproutStudio Hero.jpg") center/cover no-repeat;
 }
 
-/* product image */
-.product-img{width:100%;height:240px;object-fit:cover;border-radius:12px;display:block;}
-
-/* price */
-.price-band{
-  background:var(--price-band);
-  padding:12px 10px;
-  border-radius:10px;
-  text-align:center;
-  font-weight:700;
-  font-size:20px;
-  box-shadow:0 4px 8px rgba(0,0,0,0.04);
+.hero h1,
+.backgPic h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-/* description text and list */
-.description{font-size:14px;line-height:1.45;color:#222;}
-.features{margin-top:8px;padding-left:18px;}
-.features li{margin-bottom:6px;}
-
-/* go back */
-.go-back{margin-top:8px;color:var(--green);font-weight:700;text-decoration:none;display:inline-block;}
-
-/* responsive */
-@media (max-width:900px){
-  .hero{height:260px;}
-  .product-img{height:200px;}
-}
-@media (max-width:520px){
-  .page{padding:12px;}
-  .hero{height:300px;}
-  .product-img{height:180px;}
-  .hero .hero-text h1{font-size:28px;}
-  .kit-title{font-size:24px;}
+.hero p,
+#desc {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 6px 20px;
+  border-radius: 8px;
 }
 
-
-
-
-
-
-/* next step */
-/* CARE GUIDE PAGE */
+/* ==========================
+   CARE GUIDE PAGE
+========================== */
 .care-hero {
   background: url("images/seedlings.jpg") center/cover no-repeat;
   color: #fff;
@@ -417,7 +184,6 @@ body:not(.page) {
 
 .care-hero p {
   font-size: 15px;
-  font-weight: 500;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
 }
 
@@ -427,17 +193,10 @@ body:not(.page) {
   text-align: center;
 }
 
-.featured {
-  font-size: 18px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 15px;
-}
-
 .card {
   background: #fffceb;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
   margin: 15px auto;
   width: 90%;
   max-width: 360px;
@@ -458,7 +217,8 @@ body:not(.page) {
   margin-top: 5px;
 }
 
-.guide-list, .extra ul {
+.guide-list,
+.extra ul {
   font-size: 14px;
   color: #333;
   padding-left: 20px;
@@ -481,67 +241,200 @@ body:not(.page) {
   text-decoration: underline;
 }
 
-.extra {
-  margin-top: 5px;
-}
-
 .hidden {
   display: none;
 }
 
+/* ==========================
+   SHOP PAGE
+========================== */
+.notice {
+  background-color: white;
+  padding: 15px;
+  font-size: 13px;
+  text-align: center;
+  margin: 20px auto;
+  width: 85%;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.kits-section {
+  background-color: #dcefcf;
+  padding: 25px 15px 60px;
+}
+
+.kit-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-bottom: 22px;
+  border-radius: 15px;
+  overflow: hidden;
+  text-decoration: none;
+  color: black;
+  box-shadow: var(--shadow);
+}
+
+.kit-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.kit-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.kit-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.kit-price {
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+.kit-details {
+  font-size: 14px;
+  color: #000;
+}
+
 .view-all {
   text-align: right;
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--green);
+}
+
+/* ==========================
+   PRODUCT DETAIL PAGES
+========================== */
+.page {
+  background: var(--light-green);
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 980px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.price-band {
+  background: var(--price-band);
+  padding: 12px 10px;
+  border-radius: 10px;
+  text-align: center;
   font-weight: 700;
-  color: #1e5f32;
-  margin: 25px 10px 0 0;
+  font-size: 20px;
+  box-shadow: var(--shadow);
+}
+
+.kit-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--accent);
+  font-size: 28px;
+  text-align: center;
+}
+
+.go-back {
+  margin-top: 8px;
+  color: var(--green);
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* ==========================
+   SEARCH PAGE
+========================== */
+.search-section {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+#search-input {
+  border: none;
+  outline: none;
+  padding: 0.8rem 1rem;
+  width: 300px;
+  border-radius: 30px;
+  font-size: 1rem;
+}
+
+#search-button {
+  background-color: var(--green);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
   cursor: pointer;
+  margin-left: 8px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
 }
 
-
-.hero {
-  width: 120vw;   /* force full viewport width */
-  margin-left: 50%;
-  transform: translateX(-50%);
+#search-button:hover {
+  background-color: #2e6b34;
 }
 
+.history-section {
+  background-color: #f2f8f0;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
 
+.history-section h2 {
+  color: #2b4a23;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
 
+#search-history li {
+  background-color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 0.7rem;
+  color: #314a2a;
+  box-shadow: var(--shadow);
+  transition: background-color 0.2s;
+}
 
+#search-history li:hover {
+  background-color: #e5f4e2;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ==========================
+   PROFILE PAGE
+========================== */
 body.profile-page {
-  margin: 0;
-  background-color: #2b7134; /* green background */
+  background-color: #2b7134;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
   color: white;
 }
 
 .profile-container {
-  width: 320px;           /* keeps everything narrow */
+  width: 320px;
   text-align: center;
   padding: 20px;
-}
-
-.back-arrow {
-  font-size: 24px;
-  text-align: left;
-  cursor: pointer;
 }
 
 .profile-pic {
@@ -550,17 +443,12 @@ body.profile-page {
   border-radius: 50%;
   object-fit: cover;
   margin: 15px auto;
-  display: block;
 }
 
 .username {
   font-size: 18px;
   font-weight: 600;
   margin: 10px 0 5px;
-}
-
-p {
-  margin: 4px 0;
 }
 
 .divider {
@@ -582,81 +470,49 @@ p {
   cursor: pointer;
 }
 
-body.profile-page, 
-body.profile-page p, 
-body.profile-page .username {
-  color: white;
+/* ==========================
+   FOOTER
+========================== */
+footer {
+  background-color: var(--green);
+  color: #f8fff8;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+  font-size: 0.9rem;
 }
 
-.back-arrow {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 28px;
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
+/* ==========================
+   ANIMATED LEAVES
+========================== */
+@keyframes floatLeaves {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:root{
-  --green: #487b3b; /* adjust if you use different variable names */
+.leaf {
+  position: fixed;
+  top: -50px;
+  width: 30px;
+  height: 30px;
+  background-image: url("images/leaf.png");
+  background-size: cover;
+  opacity: 0.8;
+  animation: floatLeaves 10s linear infinite;
 }
 
-/* Full reset to remove any browser gap */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+.leaf:nth-child(1) { left: 10%; animation-delay: 0s; }
+.leaf:nth-child(2) { left: 40%; animation-delay: 3s; }
+.leaf:nth-child(3) { left: 70%; animation-delay: 6s; }
 
-/* Remove any default safe-area inset white gap (mobile iOS) */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background: var(--light-green, #e6f6da); /* fallback if you use this var elsewhere */
-  -webkit-text-size-adjust: 100%;
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.8rem; }
+  #desc { font-size: 0.9rem; }
+  #search-input { width: 200px; }
+  #search-button { width: 40px; height: 40px; }
+  .options { width: 80%; max-width: 300px; }
 }
-
-/* Ensure the page uses full viewport and no extra scroll gap */
-body {
-  min-height: 100vh;
-  overflow-x: hidden; /* prevent horizontal scroll that can reveal background */
-}
-
-
-.header {
-  position: fixed;      /* lock to top so no gap can appear */
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 64px;         /* keep same height you used before */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 16px;
-  background: var(--green); /* full-width green */
-  z-index: 1200;
-  box-shadow: none;
-  border-radius: 0;     /* remove rounded corners that might show page background */
-}
-
-
-body {
-  padding-top: 64px; /* same as header height */
-}
-

@@ -50,7 +50,17 @@ header {
   background-color: rgba(61, 135, 67, 0.95);
 }
 
-.logo { height: 48px; width: auto; display:block; }
+.logo { height: 60px; width: auto; display:block; margin-left: 20px; margin-top: 10px;}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.logo {
+  animation: float 4s ease-in-out infinite;
+}
+
 
 .hamburger {
   width: 38px; height: 26px; display:flex; flex-direction:column;

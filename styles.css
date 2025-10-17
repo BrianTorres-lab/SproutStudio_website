@@ -42,7 +42,7 @@ header a img:hover {
 
 /* ========== HERO SECTION ========== */
 .backgPic {
-  background-image: url("SproutStudio_website-main/SproudStudio.png") center center/cover no-repeat;
+  background-image: url("SproudStudio.png") center center/cover no-repeat;
   text-align: center;
   height: 300px;
   display: flex;
@@ -248,7 +248,7 @@ footer {
 /* ========== RESPONSIVE DESIGN ========== */
 @media (max-width: 600px) {
   .backgPic {
-
+    padding: 4rem 1rem;
     width: 200px;
     font-size: 0.9rem;
   }

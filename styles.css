@@ -117,18 +117,7 @@ header {
    HERO ----------------------------------------------------------------------------------------------------------------------------
    ------------------------- */
 
-.hero {
-  position: relative;
-  width: 100%;
-  height: clamp(300px, 55vh, 520px);
-  overflow: hidden;
-  border-radius: 10px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom: var(--gap);
-  box-shadow: var(--shadow);
-}
+
 .hero-index {
   background-image: url("assets/background.jpg"); 
   background-size: cover; 
@@ -169,7 +158,7 @@ header {
   filter: brightness(0.65) saturate(0.95);
 }
 
-.hero::before {
+.hero-index::before {
   content:"";
   position:absolute; inset:0;
   background: linear-gradient(to bottom, rgba(0,0,0,0.28), rgba(0,0,0,0.06));
@@ -380,6 +369,12 @@ th { background: rgba(61,135,67,0.9); color: white; }
 /* -------------------------
    PRODUCT / DETAIL page =====================================================================================================================
    ------------------------- */
+
+ .guide-list.shop-list{
+  margin-top: 20px;
+  text-align: left;
+}
+   
 .page {
   padding: 20px 0 60px;
   width:100%;

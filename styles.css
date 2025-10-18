@@ -408,42 +408,6 @@ th { background: rgba(61,135,67,0.9); color: white; }
   align-items: center;
 }
 
-/* -------------------------
-   PROFILE page ============================================================================================================================
-   ------------------------- */
-body.profile-page {
-  background: linear-gradient(180deg, #2b7134 0%, #1f5a2d 70%);
-  display:flex; 
-  align-items:center; 
-  justify-content:center;
-  min-height:100vh;
-  padding-top:0;
-}
-
-.profile-container {
-  width: 320px; 
-  background: rgba(255,255,255,0.04); color:#fff;
-  padding: 20px; 
-  border-radius:12px; 
-  text-align:center; 
-  box-shadow:0 10px 30px rgba(0,0,0,0.3);
-  margin: 3px;
-  line-height: 2;
-}
-
-.back-arrow{
-  font-size: 50px;
-  font-weight: bold;
-  color: #5af39f;
-}
-.profile-pic { 
-  width:150px; 
-  height:150px; 
-  border-radius:50%; 
-  object-fit:cover; 
-  margin:12px auto; 
-}
-
 
 /* -------------------------
    Footer ==============================================================================================================================

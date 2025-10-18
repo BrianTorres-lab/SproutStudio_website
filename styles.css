@@ -142,6 +142,10 @@ header {
   margin-bottom: 10px;
 }
 
+.hero-index.actually-about{
+  background-image: url("assets/vision-mission.jpg"); 
+}
+
 .hero .hero-bg {
   position:absolute;
   inset:0;

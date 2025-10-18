@@ -401,6 +401,7 @@ th { background: rgba(61,135,67,0.9); color: white; }
   text-decoration: none;
   color: var(--text-color);
   font-weight: 500;
+  font-weight: bolder;
 }
 
 .page {

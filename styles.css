@@ -32,6 +32,10 @@ body {
   -webkit-font-smoothing:antialiased;
 }
 
+h1{font-family: Jaro;}
+h2, h3 { font-family: Itim;}
+p{font-family: Irish Grover;}
+
 /* -------------------------
    Header / topbar & logo ----------------------------------------------------------------------------------------
    ------------------------- */
@@ -265,7 +269,7 @@ th { background: rgba(61,135,67,0.9); color: white; }
   gap: 10px;
 }
 
-.kits-grid {
+.kits-grid, .team-grid {
   display:grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 18px;
@@ -291,17 +295,30 @@ th { background: rgba(61,135,67,0.9); color: white; }
 
 /* Contact section */
 
-  .role, .bio{
+  .role, .bio, .mem-quote{
     text-align: center;
+    padding: 8px;
+  }
+
+  .mem-name{
+    display: block;
+    text-align: center;
+    gap: 20px;
+    font-size:1.1rem;
+    font-weight:700;
+    margin: auto;
+    padding: 10px;
   }
 
   .team-img{
-  height: 75px;
+  height: 100px;
   width: auto;
   border-radius: 50%;
+  margin: 15px auto;
+  display: block;
   }
 
-  
+  container
 /* -------------------------
    PRODUCT / DETAIL page =====================================================================================================================
    ------------------------- */

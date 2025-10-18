@@ -142,11 +142,23 @@ header {
   margin-bottom: 10px;
 }
 
+.hero-index.hero-care{
+  background-image: url("assets/care_tips.jpg"); 
+}
+.hero-index.hero-shop{
+  background-image: url("assets/gardern_tools.jpg"); 
+}
+.hero-index.hero-search{
+  background-image: url("assets/garden_community.jpg"); 
+}
+.hero-index.hero-contact{
+  background-image: url("assets/members.png.jpg"); 
+}
 .hero-index.actually-about{
   background-image: url("assets/vision-mission.jpg"); 
 }
 
-.hero .hero-bg {
+.hero {
   position:absolute;
   inset:0;
   width:100%;
@@ -172,6 +184,8 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
 }
 .hero-text h1 { font-size: clamp(22px, 4vw, 44px); margin-bottom:8px; letter-spacing:0.5px; }
 .hero-text p { font-size: clamp(13px, 2vw, 16px); opacity:0.95; }

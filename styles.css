@@ -36,7 +36,7 @@ body {
 
 h1{font-family: Jaro;}
 h2, h3 { font-family: Itim;}
-p{font-family: Irish Grover;}
+p{font-family: Irish Grover; font-size: large;}
 
 /* -------------------------
    Header / topbar & logo ----------------------------------------------------------------------------------------

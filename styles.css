@@ -129,6 +129,18 @@ header {
   margin-bottom: var(--gap);
   box-shadow: var(--shadow);
 }
+.hero-index {
+  background-image: url("assets/background.jpg"); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  height: 400px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+  margin-bottom: 10px;
+}
 
 .hero .hero-bg {
   position:absolute;
@@ -149,9 +161,13 @@ header {
 }
 
 .hero-text {
-  position:relative; z-index:3; color: #fff;
-  padding: 0 18px; text-align:center;
-  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: white; 
+  text-shadow: 1px 1px 2px black; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .hero-text h1 { font-size: clamp(22px, 4vw, 44px); margin-bottom:8px; letter-spacing:0.5px; }
 .hero-text p { font-size: clamp(13px, 2vw, 16px); opacity:0.95; }
@@ -298,6 +314,7 @@ th { background: rgba(61,135,67,0.9); color: white; }
   .role, .bio, .mem-quote{
     text-align: center;
     padding: 8px;
+    margin-bottom: 5px;
   }
 
   .mem-name{

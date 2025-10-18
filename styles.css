@@ -243,7 +243,7 @@ th { background: rgba(61,135,67,0.9); color: white; }
 
 
 /* -------------------------
-   SHOP / KITS SECTION ==============================================================================================================
+   SHOP + CONTACT pages ==============================================================================================================
    ------------------------- */
 .notice {
   padding: 3px;
@@ -258,7 +258,7 @@ th { background: rgba(61,135,67,0.9); color: white; }
   font-weight: bold;
 }
 
-.kits-section {
+.kits-section, .team-section {
   padding: 12px 0 40px;
   display:flex;
   flex-direction:column;
@@ -272,7 +272,7 @@ th { background: rgba(61,135,67,0.9); color: white; }
   justify-items:center;
 }
 
-.kit-card {
+.kit-card, .team-card {
   width: 100%;
   max-width: 340px;
   background: var(--card-bg);
@@ -289,6 +289,19 @@ th { background: rgba(61,135,67,0.9); color: white; }
 .kit-name { font-size:1.1rem; font-weight:700; color:var(--accent); margin-bottom:6px; }
 .kit-price { font-weight:700; color:var(--text); margin-bottom:6px; }
 
+/* Contact section */
+
+  .role, .bio{
+    text-align: center;
+  }
+
+  .team-img{
+  height: 75px;
+  width: auto;
+  border-radius: 50%;
+  }
+
+  
 /* -------------------------
    PRODUCT / DETAIL page =====================================================================================================================
    ------------------------- */
@@ -396,6 +409,7 @@ body.profile-page {
   object-fit:cover; 
   margin:12px auto; 
 }
+
 
 /* -------------------------
    Footer ==============================================================================================================================

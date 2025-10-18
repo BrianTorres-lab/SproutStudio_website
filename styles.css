@@ -285,14 +285,14 @@ th { background: rgba(61,135,67,0.9); color: white; }
   font-weight: bold;
 }
 
-.kits-section, .team-section {
+.kits-section {
   padding: 12px 0 40px;
   display:flex;
   flex-direction:column;
   gap: 10px;
 }
 
-.kits-grid, .team-grid {
+.kits-grid {
   display:grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 18px;
@@ -317,6 +317,17 @@ th { background: rgba(61,135,67,0.9); color: white; }
 .kit-price { font-weight:700; color:var(--text); margin-bottom:6px; }
 
 /* Contact section */
+
+  .team-grid{
+    padding: 12px 0 40px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+  .team-section {
+    padding: 12px 0 40px;
+  }
 
   .role, .bio, .mem-quote{
     text-align: center;
